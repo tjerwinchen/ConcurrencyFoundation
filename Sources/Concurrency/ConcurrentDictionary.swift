@@ -42,7 +42,7 @@ import Foundation
 /// Example 2.
 ///
 ///     struct AwesomeStruct {
-///       var dictionary = ConcurrentDictionary()
+///       var dictionary = ConcurrentDictionary<String, String>()
 ///
 ///       func foo() {
 ///         dictionary["key"] = "value"
@@ -50,19 +50,19 @@ import Foundation
 ///       }
 ///     }
 @propertyWrapper
-public final class ConcurrentDictionary<Key: Hashable, Value> {
+public final class ConcurrentDictionary<Key: Hashable, Value>: Concurrent where Key: Sendable, Value: Sendable {
   // MARK: Lifecycle
 
   /// Initialize a concurrent dictionary from a dictionary
   public init(wrappedValue: [Key: Value] = [:]) {
-    self.unsafeDictionary = wrappedValue
+    self.unsafeValue = wrappedValue
   }
 
   // MARK: Public
 
   /// The wrapped value is the unsafe dictionary
   public var wrappedValue: [Key: Value] {
-    unsafeDictionary
+    unsafeValue
   }
 
   /// The projected concurrent dictionary
@@ -72,32 +72,27 @@ public final class ConcurrentDictionary<Key: Hashable, Value> {
 
   /// The first element of the collection.
   public var first: (key: Key, value: Value)? {
-    concurrentLock.readLock(); defer { concurrentLock.unlock() }
-    return unsafeDictionary.first
+    read(unsafeValue.first)
   }
 
   /// The position of the first element in a nonempty dictionary.
   public var startIndex: Dictionary<Key, Value>.Index {
-    concurrentLock.readLock(); defer { concurrentLock.unlock() }
-    return unsafeDictionary.startIndex
+    read(unsafeValue.startIndex)
   }
 
   /// The dictionary’s “past the end” position—that is, the position one greater than the last valid subscript argument.
   public var endIndex: Dictionary<Key, Value>.Index {
-    concurrentLock.readLock(); defer { concurrentLock.unlock() }
-    return unsafeDictionary.endIndex
+    read(unsafeValue.endIndex)
   }
 
   /// The number of key-value pairs in the dictionary.
   public var count: Int {
-    concurrentLock.readLock(); defer { concurrentLock.unlock() }
-    return unsafeDictionary.count
+    read(unsafeValue.count)
   }
 
   /// A Boolean value that indicates whether the dictionary is empty.
   public var isEmpty: Bool {
-    concurrentLock.readLock(); defer { concurrentLock.unlock() }
-    return unsafeDictionary.isEmpty
+    read(unsafeValue.isEmpty)
   }
 
   /// Accesses the value associated with the given key for reading and writing.
@@ -111,11 +106,22 @@ public final class ConcurrentDictionary<Key: Hashable, Value> {
   public subscript(key: Key) -> Value? {
     _read {
       concurrentLock.readLock(); defer { concurrentLock.unlock() }
-      yield unsafeDictionary[key]
+      yield unsafeValue[key]
     }
     _modify {
       concurrentLock.writeLock(); defer { concurrentLock.unlock() }
-      yield &unsafeDictionary[key]
+      yield &unsafeValue[key]
+    }
+  }
+
+  public subscript(key: Key, default defaultValue: @autoclosure () -> Value) -> Value {
+    _read {
+      concurrentLock.readLock(); defer { concurrentLock.unlock() }
+      yield unsafeValue[key, default: defaultValue()]
+    }
+    _modify {
+      concurrentLock.writeLock(); defer { concurrentLock.unlock() }
+      yield &unsafeValue[key, default: defaultValue()]
     }
   }
 
@@ -132,8 +138,7 @@ public final class ConcurrentDictionary<Key: Hashable, Value> {
   ///   was added.
   @discardableResult
   public func updateValue(_ value: Value, forKey key: Key) -> Value? {
-    concurrentLock.writeLock(); defer { concurrentLock.unlock() }
-    return unsafeDictionary.updateValue(value, forKey: key)
+    write(unsafeValue.updateValue(value, forKey: key))
   }
 
   /// Removes all key-value pairs from the dictionary.
@@ -146,12 +151,11 @@ public final class ConcurrentDictionary<Key: Hashable, Value> {
   ///   buffer capacity that the collection has, otherwise the underlying
   ///   buffer is released.  The default is `false`.
   public func removeAll(keepingCapacity keepCapacity: Bool = false) {
-    concurrentLock.writeLock(); defer { concurrentLock.unlock() }
-    unsafeDictionary.removeAll(keepingCapacity: keepCapacity)
+    write(unsafeValue.removeAll(keepingCapacity: keepCapacity))
   }
 
-  // MARK: Private
+  // MARK: Internal
 
-  private var concurrentLock = ConcurrentLock()
-  private var unsafeDictionary: [Key: Value]
+  let concurrentLock = ConcurrentLock()
+  var unsafeValue: [Key: Value]
 }

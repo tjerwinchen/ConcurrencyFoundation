@@ -24,9 +24,104 @@
 @testable import Concurrency
 import XCTest
 
+// MARK: - AwesomeClass
+
+class AwesomeClass {
+  var intValue = 0
+  var boolValue = false
+}
+
+// MARK: - ConcurrencyTests
+
 final class ConcurrencyTests: XCTestCase {
-  func testExample() throws {
-    DispatchQueue.concurrentPerform(iterations: 100) { _ in
+  func test_concurrency() throws {
+    @Concurrency
+    var numbers: [Int] = []
+
+    @Concurrency
+    var awesomeClass = AwesomeClass()
+
+    let count = 100
+
+    DispatchQueue.concurrentPerform(iterations: count) { idx in
+      $numbers.updateValue { value in
+        value.append(idx)
+        return value
+      }
+
+      $numbers.readValue { value in
+        XCTAssertNotNil(value.last)
+        return value
+      }
+
+      $awesomeClass.updateValue { value in
+
+        if value.boolValue {
+          value.intValue += 1
+        } else {
+          value.intValue -= 1
+        }
+        value.boolValue = !value.boolValue
+        return value
+      }
     }
+    XCTAssertEqual(numbers.count, count)
+    XCTAssertEqual(awesomeClass.intValue, 0)
+    XCTAssertEqual(awesomeClass.boolValue, false)
+  }
+
+  func test_array() throws {
+    @ConcurrentArray
+    var array: [[Int]] = []
+
+    let expectation = XCTestExpectation()
+    let count = 100
+    let dispatchGroup = DispatchGroup()
+
+    for idx in 0 ..< count {
+      dispatchGroup.enter()
+      DispatchQueue.global().async {
+        $array.append([-1])
+        XCTAssertNotNil($array.first)
+        XCTAssertGreaterThan($array.count, 0)
+        $array[idx] = [idx, idx]
+        XCTAssertEqual($array[idx], [idx, idx])
+        dispatchGroup.leave()
+      }
+    }
+
+    dispatchGroup.notify(queue: .main) {
+      expectation.fulfill()
+    }
+
+    wait(for: [expectation], timeout: 10)
+    XCTAssertEqual(array.count, count)
+  }
+
+  func test_dictionary() throws {
+    @ConcurrentDictionary
+    var dict: [Int: [Int: Int]] = [:]
+
+    let expectation = XCTestExpectation()
+    let count = 100
+    let dispatchGroup = DispatchGroup()
+
+    for idx in 0 ..< count {
+      dispatchGroup.enter()
+      DispatchQueue.global().async {
+        $dict[idx, default: [:]] = [idx: idx]
+        XCTAssertNotNil($dict.first)
+        XCTAssertGreaterThan($dict.count, 0)
+        XCTAssertEqual($dict[idx], [idx: idx])
+        dispatchGroup.leave()
+      }
+    }
+
+    dispatchGroup.notify(queue: .main) {
+      expectation.fulfill()
+    }
+
+    wait(for: [expectation], timeout: 10)
+    XCTAssertEqual(dict.count, count)
   }
 }

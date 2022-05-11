@@ -25,7 +25,7 @@ import Foundation
 
 // MARK: - ConcurrentLocking
 
-public protocol ConcurrentLocking: AnyObject {
+protocol ConcurrentLocking: AnyObject {
   var rwlock: pthread_rwlock_t { get set }
 
   /// Unlocking
@@ -39,22 +39,23 @@ public protocol ConcurrentLocking: AnyObject {
 }
 
 extension ConcurrentLocking {
-  public func unlock() {
+  func unlock() {
     pthread_rwlock_unlock(&rwlock)
   }
 
-  public func writeLock() {
+  func writeLock() {
     pthread_rwlock_wrlock(&rwlock)
   }
 
   /// Locking for reading
-  public func readLock() {
+  func readLock() {
     pthread_rwlock_rdlock(&rwlock)
   }
 }
 
 // MARK: - ConcurrentLock
 
+/// On top of `pthread_rwlock_init`, a `ConcurrentLock` maintains a pair of associated locks, one for read-only operations and one for writing. The read lock may be held simultaneously by multiple reader threads, so long as there are no writers. The write lock is exclusive.
 public final class ConcurrentLock: ConcurrentLocking {
   // MARK: Lifecycle
 
@@ -69,6 +70,20 @@ public final class ConcurrentLock: ConcurrentLocking {
 
   // MARK: Public
 
+  @inline(__always)
+  public func read<T>(_ action: @autoclosure () -> T) -> T {
+    readLock(); defer { unlock() }
+    return action()
+  }
+
+  @inline(__always)
+  public func write<T>(_ action: @autoclosure () -> T) -> T {
+    writeLock(); defer { unlock() }
+    return action()
+  }
+
+  // MARK: Internal
+
   // A pthread read-write lock object.
-  public var rwlock = pthread_rwlock_t()
+  var rwlock = pthread_rwlock_t()
 }

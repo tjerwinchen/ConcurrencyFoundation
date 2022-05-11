@@ -9,9 +9,12 @@ let package = Package(
     .library(name: "Concurrency", targets: ["Concurrency"]),
   ],
   dependencies: [
+    .package(url: "https://github.com/apple/swift-atomics.git", .upToNextMajor(from: "1.0.2")),
   ],
   targets: [
-    .target(name: "Concurrency", dependencies: []),
+    .target(name: "Concurrency", dependencies: [
+      .product(name: "Atomics", package: "swift-atomics"),
+    ]),
     .testTarget(name: "ConcurrencyTests", dependencies: [
       .target(name: "Concurrency"),
     ]),
