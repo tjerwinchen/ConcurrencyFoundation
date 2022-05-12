@@ -23,6 +23,34 @@
 
 import Foundation
 
+/// Wraps the `Array` in a concurrent dictionary.
+///
+/// Example 1.
+///
+///     struct AwesomeStruct {
+///       @ConcurrentArray
+///       var array: [String] = []
+///
+///       func foo() {
+///         $array.append(1)
+///         $array.append(2)
+///         $array = 3
+///         $array.removeAll()
+///       }
+///     }
+///
+/// Example 2.
+///
+///     struct AwesomeStruct {
+///       var array = ConcurrentArray<String>()
+///
+///       func foo() {
+///         $array.append(1)
+///         $array.append(2)
+///         $array = 3
+///         $array.removeAll()
+///       }
+///     }
 @propertyWrapper
 public final class ConcurrentArray<Element: Sendable>: Concurrent {
   // MARK: Lifecycle
@@ -44,23 +72,27 @@ public final class ConcurrentArray<Element: Sendable>: Concurrent {
     self
   }
 
-  /// The first element of the collection.
+  /// Get the first element of the collection  in a thread-safe way.
   public var first: Element? {
     read(unsafeValue.first)
   }
 
+  /// Get the last element of the collection  in a thread-safe way.
   public var last: Element? {
     read(unsafeValue.last)
   }
 
+  /// A Boolean value indicating whether the collection is empty in a thread-safe way.
   public var isEmpty: Bool {
     read(unsafeValue.isEmpty)
   }
 
+  /// The number of elements in the array in a thread-safe way.
   public var count: Int {
     read(unsafeValue.count)
   }
 
+  /// Accesses the contiguous subrange of the collection's elements specified by a range expression in a thread-safe way.
   public subscript(index: Int) -> Element {
     _read {
       concurrentLock.readLock(); defer { concurrentLock.unlock() }
@@ -72,10 +104,12 @@ public final class ConcurrentArray<Element: Sendable>: Concurrent {
     }
   }
 
+  /// Adds a new element at the end of the array in a thread-safe way.
   public func append(_ newElement: Element) {
     write(unsafeValue.append(newElement))
   }
 
+  /// Adds a new element at the end of the array in a thread-safe way.
   public func append<S>(contentsOf newElements: S) where Element == S.Element, S: Sequence {
     write(unsafeValue.append(contentsOf: newElements))
   }
