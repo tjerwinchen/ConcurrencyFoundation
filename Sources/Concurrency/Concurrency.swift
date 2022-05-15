@@ -72,7 +72,14 @@ public final class Concurrency<Value: Sendable>: Concurrent {
 
   /// Value in a thread-safe way
   public var safeValue: Value {
-    read(unsafeValue)
+    _read {
+      concurrentLock.readLock(); defer { concurrentLock.unlock() }
+      yield unsafeValue
+    }
+    _modify {
+      concurrentLock.writeLock(); defer { concurrentLock.unlock() }
+      yield &unsafeValue
+    }
   }
 
   /// Reading value in a thread-safe way and provide a post-action block when the value is fetched

@@ -1,0 +1,18 @@
+PODS:
+  - Concurrency (0.0.1)
+  - Concurrency/Tests (0.0.1)
+
+DEPENDENCIES:
+  - Concurrency (from `../../`)
+  - Concurrency/Tests (from `../../`)
+
+EXTERNAL SOURCES:
+  Concurrency:
+    :path: "../../"
+
+SPEC CHECKSUMS:
+  Concurrency: 535aca11171ce6d8e82039c7a40c011daf604b16
+
+PODFILE CHECKSUM: 861e4866f4ea3bf10fb0dedce32328a4684ea06e
+
+COCOAPODS: 1.11.3

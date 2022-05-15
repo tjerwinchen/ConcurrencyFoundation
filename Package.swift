@@ -4,7 +4,7 @@ import PackageDescription
 
 let package = Package(
   name: "Concurrency",
-  platforms: [.iOS(.v12)],
+  platforms: [.iOS(.v12), .tvOS(.v12), .watchOS(.v5), .macOS(.v10_13)],
   products: [
     .library(name: "Concurrency", targets: ["Concurrency"]),
   ],
