@@ -3,7 +3,7 @@ options:
   postGenCommand: bundle exec pod install
   
 include:
-  - path: /Users/theochen/.tooling/xcodegen/base.yml
+  - path: ../../../Infra/ios/xcodegen.yml
 
 name: Example
 settings:

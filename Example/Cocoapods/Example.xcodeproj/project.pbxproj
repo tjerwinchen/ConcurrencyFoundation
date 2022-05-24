@@ -11,29 +11,29 @@
 		4B0F4E6721770C176BBFCBA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D64A93A9FFCA1267078EDDAF /* Assets.xcassets */; };
 		4E4C898B920106C14E60A4DC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B22B1A71E54D28BF3CA610 /* SceneDelegate.swift */; };
 		ABEBFF5871CF589AA6D6FCBF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3A6CD884EAAA7EE0D4AE60 /* ViewController.swift */; };
+		CAB89E8209ED93EAD416CD44 /* Pods_ConcurrencyExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CB1B6BEE017832D68F8D895 /* Pods_ConcurrencyExample.framework */; };
 		DB523741D6D44999F84898DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF8E38BF735A55D1FADD354 /* AppDelegate.swift */; };
-		DE318AF41E77F3373557E434 /* Pods_ConcurrencyExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 072CAD1E226F3E9EFAF2B49F /* Pods_ConcurrencyExample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		00B22B1A71E54D28BF3CA610 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		072CAD1E226F3E9EFAF2B49F /* Pods_ConcurrencyExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ConcurrencyExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		27AE31D6C0A98571F964BC70 /* Pods-ConcurrencyExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConcurrencyExample.debug.xcconfig"; path = "Target Support Files/Pods-ConcurrencyExample/Pods-ConcurrencyExample.debug.xcconfig"; sourceTree = "<group>"; };
 		2B3A6CD884EAAA7EE0D4AE60 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		367AB63A561989CE7D5F91F3 /* Pods-ConcurrencyExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConcurrencyExample.debug.xcconfig"; path = "Target Support Files/Pods-ConcurrencyExample/Pods-ConcurrencyExample.debug.xcconfig"; sourceTree = "<group>"; };
+		5207B5B1D7365A04EB9C7B5B /* Pods-ConcurrencyExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConcurrencyExample.release.xcconfig"; path = "Target Support Files/Pods-ConcurrencyExample/Pods-ConcurrencyExample.release.xcconfig"; sourceTree = "<group>"; };
 		7C9BBF641048E77207C3DAFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		8FD1DC5CC6BCD2EE8B109DC1 /* Pods-ConcurrencyExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConcurrencyExample.release.xcconfig"; path = "Target Support Files/Pods-ConcurrencyExample/Pods-ConcurrencyExample.release.xcconfig"; sourceTree = "<group>"; };
 		9599A15B7941E8500EF4210D /* ConcurrencyExample.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = ConcurrencyExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CB1B6BEE017832D68F8D895 /* Pods_ConcurrencyExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ConcurrencyExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2A245EEE18CBCD4A5393F4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D64A93A9FFCA1267078EDDAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DFF8E38BF735A55D1FADD354 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3984EA560CD242747104212F /* Frameworks */ = {
+		AE0D43743D841F9F9223CDC6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE318AF41E77F3373557E434 /* Pods_ConcurrencyExample.framework in Frameworks */,
+				CAB89E8209ED93EAD416CD44 /* Pods_ConcurrencyExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,29 +67,29 @@
 			children = (
 				27BEE16FF0FD77C816936FF3 /* Concurrency */,
 				3031F8ABC084F8D43CC56342 /* Products */,
-				F4436EACA17444038A286FE9 /* Pods */,
-				B8FAFD5D0E3EFA971145FED5 /* Frameworks */,
+				9BCCEE552D598AAAA8CDCDD7 /* Pods */,
+				E3AAE3A5EF038551A670A40E /* Frameworks */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
 			tabWidth = 2;
 		};
-		B8FAFD5D0E3EFA971145FED5 /* Frameworks */ = {
+		9BCCEE552D598AAAA8CDCDD7 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				072CAD1E226F3E9EFAF2B49F /* Pods_ConcurrencyExample.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		F4436EACA17444038A286FE9 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				27AE31D6C0A98571F964BC70 /* Pods-ConcurrencyExample.debug.xcconfig */,
-				8FD1DC5CC6BCD2EE8B109DC1 /* Pods-ConcurrencyExample.release.xcconfig */,
+				367AB63A561989CE7D5F91F3 /* Pods-ConcurrencyExample.debug.xcconfig */,
+				5207B5B1D7365A04EB9C7B5B /* Pods-ConcurrencyExample.release.xcconfig */,
 			);
 			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		E3AAE3A5EF038551A670A40E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9CB1B6BEE017832D68F8D895 /* Pods_ConcurrencyExample.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -99,12 +99,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 64712BA823D3574A8B953AA5 /* Build configuration list for PBXNativeTarget "ConcurrencyExample" */;
 			buildPhases = (
-				09ADD576D24E84E34A76DD78 /* [CP] Check Pods Manifest.lock */,
+				6BEED06A39B181080D8ECD57 /* [CP] Check Pods Manifest.lock */,
 				C786CD63A7AAF04C8E333671 /* Sources */,
 				6601E56C7372F4C7171094F5 /* SwiftLint */,
 				4730907FE957779FED91D3A7 /* Resources */,
-				3984EA560CD242747104212F /* Frameworks */,
-				0FA27818F5C7DC915C4DA736 /* [CP] Embed Pods Frameworks */,
+				AE0D43743D841F9F9223CDC6 /* Frameworks */,
+				DFE58E3239AA5ED88487504C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,7 +129,7 @@
 				};
 			};
 			buildConfigurationList = 36FC72E69D906F48675C62BF /* Build configuration list for PBXProject "Example" */;
-			compatibilityVersion = "Xcode 10.0";
+			compatibilityVersion = "Xcode 11.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -159,7 +159,25 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		09ADD576D24E84E34A76DD78 /* [CP] Check Pods Manifest.lock */ = {
+		6601E56C7372F4C7171094F5 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "SDKROOT=(xcrun --sdk macosx --show-sdk-path)\nSWIFTLINT_YML=$HOME/.tooling/swiftlint/base.yml\nPATH=/opt/homebrew/bin:$PATH\n\nif [ -f $SWIFTLINT_YML ]; then\nif which swiftlint >/dev/null; then\nswiftlint --no-cache --config $SWIFTLINT_YML --path ../../ --reporter xcode\nfi\nelse\nprintf 'Not found .swiftlnt.yml'\nexit 0\nfi";
+		};
+		6BEED06A39B181080D8ECD57 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -181,7 +199,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		0FA27818F5C7DC915C4DA736 /* [CP] Embed Pods Frameworks */ = {
+		DFE58E3239AA5ED88487504C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -197,24 +215,6 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ConcurrencyExample/Pods-ConcurrencyExample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
-		};
-		6601E56C7372F4C7171094F5 /* SwiftLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = SwiftLint;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "SDKROOT=(xcrun --sdk macosx --show-sdk-path)\nSWIFTLINT_YML=$HOME/.tooling/swiftlint/base.yml\nPATH=/opt/homebrew/bin:$PATH\n\nif [ -f $SWIFTLINT_YML ]; then\nif which swiftlint >/dev/null; then\nswiftlint --no-cache --config $SWIFTLINT_YML --path ../../ --reporter xcode\nfi\nelse\nprintf 'Not found .swiftlnt.yml'\nexit 0\nfi";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -304,7 +304,7 @@
 		};
 		5B6319F30261D59275E25452 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 27AE31D6C0A98571F964BC70 /* Pods-ConcurrencyExample.debug.xcconfig */;
+			baseConfigurationReference = 367AB63A561989CE7D5F91F3 /* Pods-ConcurrencyExample.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -386,7 +386,7 @@
 		};
 		5C0DA32085280AC0DA749B58 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8FD1DC5CC6BCD2EE8B109DC1 /* Pods-ConcurrencyExample.release.xcconfig */;
+			baseConfigurationReference = 5207B5B1D7365A04EB9C7B5B /* Pods-ConcurrencyExample.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ALWAYS_SEARCH_USER_PATHS = NO;

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -117,7 +117,7 @@
 				};
 			};
 			buildConfigurationList = 36FC72E69D906F48675C62BF /* Build configuration list for PBXProject "Example" */;
-			compatibilityVersion = "Xcode 10.0";
+			compatibilityVersion = "Xcode 11.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -162,7 +162,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "SDKROOT=(xcrun --sdk macosx --show-sdk-path)\nSWIFTLINT_YML=$HOME/.tooling/swiftlint/base.yml\nPATH=/opt/homebrew/bin:$PATH\n\nif [ -f $SWIFTLINT_YML ]; then\nif which swiftlint >/dev/null; then\nswiftlint --no-cache --config $SWIFTLINT_YML --path ../../ --reporter xcode\nfi\nelse\nprintf 'Not found .swiftlnt.yml'\nexit 0\nfi\n";
+			shellScript = "SDKROOT=(xcrun --sdk macosx --show-sdk-path)\nSWIFTLINT_YML=$HOME/.tooling/swiftlint/base.yml\nPATH=/opt/homebrew/bin:$PATH\n\nif [ -f $SWIFTLINT_YML ]; then\nif which swiftlint >/dev/null; then\nswiftlint --no-cache --config $SWIFTLINT_YML --path ../../ --reporter xcode\nfi\nelse\nprintf 'Not found .swiftlnt.yml'\nexit 0\nfi";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -303,22 +303,13 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = ../../Concurrency/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				LLVM_LTO = NO;
 				MARKETING_VERSION = 0.0.1;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-ObjC",
-					"-all_load",
-					"-lz",
-				);
+				OTHER_LDFLAGS = "$(inherited) -ObjC -all_load -lz";
 				OTHER_SWIFT_FLAGS = "$(inherited) -DDEBUG -Xfrontend -debug-time-function-bodies -Xfrontend -warn-long-function-bodies=400 -Xfrontend -warn-long-expression-type-checking=400";
 				PRODUCT_BUNDLE_IDENTIFIER = codes.codebase.concurrency;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -384,21 +375,13 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = ../../Concurrency/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				LLVM_LTO = NO;
 				MARKETING_VERSION = 0.0.1;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-ObjC",
-					"-all_load",
-				);
+				OTHER_LDFLAGS = "$(inherited) -ObjC -all_load";
 				OTHER_SWIFT_FLAGS = "$(inherited) -DRELEASE";
 				PRODUCT_BUNDLE_IDENTIFIER = codes.codebase.concurrency;
 				PRODUCT_NAME = "$(TARGET_NAME)";
