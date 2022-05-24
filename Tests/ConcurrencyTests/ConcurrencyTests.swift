@@ -71,17 +71,19 @@ final class ConcurrencyTests: XCTestCase {
   }
 
   func test_array() throws {
-    @ConcurrentArray
-    var array: [[Int]] = []
 
     let expectation = XCTestExpectation()
     let count = 100
     let dispatchGroup = DispatchGroup()
+    
+    @ConcurrentArray
+    var array: [[Int]] = (0 ..< count).compactMap {_ in
+      []
+    }
 
     for idx in 0 ..< count {
       dispatchGroup.enter()
       DispatchQueue.global().async {
-        $array.append([-1])
         XCTAssertNotNil($array.first)
         XCTAssertGreaterThan($array.count, 0)
         $array[idx] = [idx, idx]
