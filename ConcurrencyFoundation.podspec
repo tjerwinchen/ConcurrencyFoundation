@@ -2,7 +2,7 @@ enable_test = true
 
 Pod::Spec.new do |spec|
 
-  spec.name         = "Concurrency"
+  spec.name         = "ConcurrencyFoundation"
   spec.version      = "0.0.1"
   spec.summary      = "An easy-to-use and lightweight concurrency utilities for thread safty in swift
 ."

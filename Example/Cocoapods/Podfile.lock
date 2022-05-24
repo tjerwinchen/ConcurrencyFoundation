@@ -1,18 +1,18 @@
 PODS:
-  - Concurrency (0.0.1)
-  - Concurrency/Tests (0.0.1)
+  - ConcurrencyFoundation (0.0.1)
+  - ConcurrencyFoundation/Tests (0.0.1)
 
 DEPENDENCIES:
-  - Concurrency (from `../../`)
-  - Concurrency/Tests (from `../../`)
+  - ConcurrencyFoundation (from `../../`)
+  - ConcurrencyFoundation/Tests (from `../../`)
 
 EXTERNAL SOURCES:
-  Concurrency:
+  ConcurrencyFoundation:
     :path: "../../"
 
 SPEC CHECKSUMS:
-  Concurrency: c4d548a27248a0f61bc91b975a0e098945147d02
+  ConcurrencyFoundation: 8d5b8108308cfab9edc21100b8689107dd39c2a8
 
-PODFILE CHECKSUM: 861e4866f4ea3bf10fb0dedce32328a4684ea06e
+PODFILE CHECKSUM: 7b56b060588778583c3820e4781b281a02e53d01
 
 COCOAPODS: 1.11.3

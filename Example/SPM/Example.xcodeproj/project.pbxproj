@@ -7,23 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1A5EC495000A575950E38E6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC6E8F75C23B9BEAB7B79A2D /* LaunchScreen.storyboard */; };
-		4B0F4E6721770C176BBFCBA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D64A93A9FFCA1267078EDDAF /* Assets.xcassets */; };
-		4E4C898B920106C14E60A4DC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B22B1A71E54D28BF3CA610 /* SceneDelegate.swift */; };
-		ABEBFF5871CF589AA6D6FCBF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3A6CD884EAAA7EE0D4AE60 /* ViewController.swift */; };
-		C58C0A9362846C810A4D0251 /* Concurrency in Frameworks */ = {isa = PBXBuildFile; productRef = 34F151CD475359093D4155F0 /* Concurrency */; };
-		DB523741D6D44999F84898DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF8E38BF735A55D1FADD354 /* AppDelegate.swift */; };
+		3A719EDD361A068F63B0C582 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56CF512D8511C12A51285297 /* Assets.xcassets */; };
+		790D5920005E0FFA2D725ADC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530FE85D2D7CE328CDF1F3E9 /* SceneDelegate.swift */; };
+		9ACEC96508BA90D96E81C5CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC988C83BB52C30530FC44F8 /* AppDelegate.swift */; };
+		C58C0A9362846C810A4D0251 /* ConcurrencyFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 7BD8D94EC4EB6F482B6E5476 /* ConcurrencyFoundation */; };
+		D9AE352FC13A2B2BDB8828DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBC269101503A8CABFFF117C /* LaunchScreen.storyboard */; };
+		F89AF2D53020D7E1F84E8FC3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED571B79BDC4100B0A6037F5 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		00B22B1A71E54D28BF3CA610 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2B3A6CD884EAAA7EE0D4AE60 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		7C9BBF641048E77207C3DAFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		91B6F10EC21E35A9C1974A6E /* Concurrency */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Concurrency; path = ../..; sourceTree = SOURCE_ROOT; };
+		530FE85D2D7CE328CDF1F3E9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		56CF512D8511C12A51285297 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7BB62B190869429E1E765D9B /* ConcurrencyFoundation */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ConcurrencyFoundation; path = ../..; sourceTree = SOURCE_ROOT; };
 		9599A15B7941E8500EF4210D /* ConcurrencyExample.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = ConcurrencyExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D2A245EEE18CBCD4A5393F4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		D64A93A9FFCA1267078EDDAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		DFF8E38BF735A55D1FADD354 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AF07AB7E90EB7EECFFFE8364 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		BB95AA68DA92B83F2D048B2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BC988C83BB52C30530FC44F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		ED571B79BDC4100B0A6037F5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,7 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C58C0A9362846C810A4D0251 /* Concurrency in Frameworks */,
+				C58C0A9362846C810A4D0251 /* ConcurrencyFoundation in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,24 +41,10 @@
 		12B9A666C278AB8CB5B6FA33 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
-				91B6F10EC21E35A9C1974A6E /* Concurrency */,
+				7BB62B190869429E1E765D9B /* ConcurrencyFoundation */,
 			);
 			name = Packages;
 			sourceTree = SOURCE_ROOT;
-		};
-		27BEE16FF0FD77C816936FF3 /* Concurrency */ = {
-			isa = PBXGroup;
-			children = (
-				DFF8E38BF735A55D1FADD354 /* AppDelegate.swift */,
-				D64A93A9FFCA1267078EDDAF /* Assets.xcassets */,
-				D2A245EEE18CBCD4A5393F4C /* Info.plist */,
-				FC6E8F75C23B9BEAB7B79A2D /* LaunchScreen.storyboard */,
-				00B22B1A71E54D28BF3CA610 /* SceneDelegate.swift */,
-				2B3A6CD884EAAA7EE0D4AE60 /* ViewController.swift */,
-			);
-			name = Concurrency;
-			path = ../../Concurrency;
-			sourceTree = "<group>";
 		};
 		3031F8ABC084F8D43CC56342 /* Products */ = {
 			isa = PBXGroup;
@@ -71,13 +57,27 @@
 		54E0667A38E60354DB90F776 = {
 			isa = PBXGroup;
 			children = (
-				27BEE16FF0FD77C816936FF3 /* Concurrency */,
+				80330E43330C696D3AC530DF /* ConcurrencyFoundation */,
 				12B9A666C278AB8CB5B6FA33 /* Packages */,
 				3031F8ABC084F8D43CC56342 /* Products */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
 			tabWidth = 2;
+		};
+		80330E43330C696D3AC530DF /* ConcurrencyFoundation */ = {
+			isa = PBXGroup;
+			children = (
+				BC988C83BB52C30530FC44F8 /* AppDelegate.swift */,
+				56CF512D8511C12A51285297 /* Assets.xcassets */,
+				AF07AB7E90EB7EECFFFE8364 /* Info.plist */,
+				DBC269101503A8CABFFF117C /* LaunchScreen.storyboard */,
+				530FE85D2D7CE328CDF1F3E9 /* SceneDelegate.swift */,
+				ED571B79BDC4100B0A6037F5 /* ViewController.swift */,
+			);
+			name = ConcurrencyFoundation;
+			path = ../../ConcurrencyFoundation;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -97,7 +97,7 @@
 			);
 			name = ConcurrencyExample;
 			packageProductDependencies = (
-				34F151CD475359093D4155F0 /* Concurrency */,
+				7BD8D94EC4EB6F482B6E5476 /* ConcurrencyFoundation */,
 			);
 			productName = ConcurrencyExample;
 			productReference = 9599A15B7941E8500EF4210D /* ConcurrencyExample.app */;
@@ -138,8 +138,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B0F4E6721770C176BBFCBA3 /* Assets.xcassets in Resources */,
-				1A5EC495000A575950E38E6D /* LaunchScreen.storyboard in Resources */,
+				3A719EDD361A068F63B0C582 /* Assets.xcassets in Resources */,
+				D9AE352FC13A2B2BDB8828DC /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,19 +171,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB523741D6D44999F84898DF /* AppDelegate.swift in Sources */,
-				4E4C898B920106C14E60A4DC /* SceneDelegate.swift in Sources */,
-				ABEBFF5871CF589AA6D6FCBF /* ViewController.swift in Sources */,
+				9ACEC96508BA90D96E81C5CF /* AppDelegate.swift in Sources */,
+				790D5920005E0FFA2D725ADC /* SceneDelegate.swift in Sources */,
+				F89AF2D53020D7E1F84E8FC3 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		FC6E8F75C23B9BEAB7B79A2D /* LaunchScreen.storyboard */ = {
+		DBC269101503A8CABFFF117C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				7C9BBF641048E77207C3DAFF /* Base */,
+				BB95AA68DA92B83F2D048B2E /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -302,7 +302,7 @@
 				GCC_WARN_UNUSED_PARAMETER = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = ../../Concurrency/Info.plist;
+				INFOPLIST_FILE = ../../ConcurrencyFoundation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				LLVM_LTO = NO;
@@ -311,7 +311,7 @@
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited) -ObjC -all_load -lz";
 				OTHER_SWIFT_FLAGS = "$(inherited) -DDEBUG -Xfrontend -debug-time-function-bodies -Xfrontend -warn-long-function-bodies=400 -Xfrontend -warn-long-expression-type-checking=400";
-				PRODUCT_BUNDLE_IDENTIFIER = codes.codebase.concurrency;
+				PRODUCT_BUNDLE_IDENTIFIER = "codes.codebase.concurrency-foundation";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = incremental;
@@ -374,7 +374,7 @@
 				GCC_WARN_UNUSED_PARAMETER = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = ../../Concurrency/Info.plist;
+				INFOPLIST_FILE = ../../ConcurrencyFoundation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				LLVM_LTO = NO;
@@ -383,7 +383,7 @@
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited) -ObjC -all_load";
 				OTHER_SWIFT_FLAGS = "$(inherited) -DRELEASE";
-				PRODUCT_BUNDLE_IDENTIFIER = codes.codebase.concurrency;
+				PRODUCT_BUNDLE_IDENTIFIER = "codes.codebase.concurrency-foundation";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -484,9 +484,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		34F151CD475359093D4155F0 /* Concurrency */ = {
+		7BD8D94EC4EB6F482B6E5476 /* ConcurrencyFoundation */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = Concurrency;
+			productName = ConcurrencyFoundation;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

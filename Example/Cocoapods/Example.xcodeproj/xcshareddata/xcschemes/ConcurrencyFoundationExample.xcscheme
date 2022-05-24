@@ -15,9 +15,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2DF99CB2083D418B9EDAFFB4"
-               BuildableName = "ConcurrencyExample.app"
-               BlueprintName = "ConcurrencyExample"
+               BlueprintIdentifier = "C3495D7075C74D534FB9A38A"
+               BuildableName = "ConcurrencyFoundationExample.app"
+               BlueprintName = "ConcurrencyFoundationExample"
                ReferencedContainer = "container:Example.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -34,9 +34,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2DF99CB2083D418B9EDAFFB4"
-            BuildableName = "ConcurrencyExample.app"
-            BlueprintName = "ConcurrencyExample"
+            BlueprintIdentifier = "C3495D7075C74D534FB9A38A"
+            BuildableName = "ConcurrencyFoundationExample.app"
+            BlueprintName = "ConcurrencyFoundationExample"
             ReferencedContainer = "container:Example.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -57,9 +57,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2DF99CB2083D418B9EDAFFB4"
-            BuildableName = "ConcurrencyExample.app"
-            BlueprintName = "ConcurrencyExample"
+            BlueprintIdentifier = "C3495D7075C74D534FB9A38A"
+            BuildableName = "ConcurrencyFoundationExample.app"
+            BlueprintName = "ConcurrencyFoundationExample"
             ReferencedContainer = "container:Example.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -76,9 +76,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2DF99CB2083D418B9EDAFFB4"
-            BuildableName = "ConcurrencyExample.app"
-            BlueprintName = "ConcurrencyExample"
+            BlueprintIdentifier = "C3495D7075C74D534FB9A38A"
+            BuildableName = "ConcurrencyFoundationExample.app"
+            BlueprintName = "ConcurrencyFoundationExample"
             ReferencedContainer = "container:Example.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
